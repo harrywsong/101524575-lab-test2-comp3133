@@ -3,11 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { CharacterService } from '../../services/character';
 import { Character } from '../../models/character';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-characterfilter',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, MatSelectModule, MatFormFieldModule],
   templateUrl: './characterfilter.html',
   styleUrl: './characterfilter.css'
 })
