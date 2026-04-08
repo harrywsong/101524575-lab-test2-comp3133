@@ -1,59 +1,33 @@
-# 101524575LabTest2Comp3133
+# COMP3133 LAB TEST 2
+# Woohyuk (Harry) Song | 101524575
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.4.
+## Description
+Angular application to browse Harry Potter characters using a public Harry Potter API.
 
-## Development server
+## Features
+- View all characters (name, house, image)
+- Filter characters categorized by Hogwarts house
+- View detailed character information (name, actor, wizard t/f, species, ancestry, wand (wood type, core type, lenght), image)
 
-To start a local development server, run:
+## Screenshots
+Character List
+![alt text](screenshots/image.png)
 
-```bash
-ng serve
-```
+Character Details
+![alt text](screenshots/image2.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Filtered by House #1
+![alt text](screenshots/image3.png)
 
-## Code scaffolding
+Filtered by House #2
+![alt text](screenshots/image4.png)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Currently Hosted At:
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## How to Run the Application
+1. Clone the repo using `git clone https://github.com/harrywsong/101524575-lab-test2-comp3133.git`
+2. Run `cd 101524575-lab-test2-comp3133`
+3. Run `npm install`
+4. Run `ng serve`
+5. Open `http://localhost:4200`
