@@ -22,8 +22,8 @@ Filtered by House #1
 Filtered by House #2
 ![alt text](screenshots/image4.png)
 
-## Currently Hosted At:
-
+## Currently Hosted/Deployed At:
+https://101524575-lab-test2-comp3133.vercel.app/
 
 ## How to Run the Application
 1. Clone the repo using `git clone https://github.com/harrywsong/101524575-lab-test2-comp3133.git`
