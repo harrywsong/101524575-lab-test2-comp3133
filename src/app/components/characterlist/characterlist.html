@@ -1,1 +1,21 @@
-<p>characterlist works!</p>
+<h1>All Harry Potter Characters</h1>
+<div class="grid">
+  @for (character of characters(); track character.id) {
+    <div class="card">
+      @if (character.image) {
+        <img [src]="character.image" [alt]="character.name" />
+      }
+      <p><strong>{{ character.name }}</strong></p>
+      <p>
+        @switch (character.house) {
+          @case ('Gryffindor') { <span style="color: red;">Gryffindor</span> }
+          @case ('Slytherin') { <span style="color: green;">Slytherin</span> }
+          @case ('Hufflepuff') { <span style="color: goldenrod;">Hufflepuff</span> }
+          @case ('Ravenclaw') { <span style="color: blue;">Ravenclaw</span> }
+          @default { <span>House: N/A</span> }
+        }
+      </p>
+      <a [routerLink]="['/character', character.id]">View {{ character.name }} Details</a>
+    </div>
+  }
+</div>

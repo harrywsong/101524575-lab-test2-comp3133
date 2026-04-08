@@ -5,11 +5,12 @@ import { Character } from '../../models/character';
 
 @Component({
   selector: 'app-characterlist',
+  standalone: true,
   imports: [RouterLink],
   templateUrl: './characterlist.html',
   styleUrl: './characterlist.css'
 })
-export class CharacterlistComponent implements OnInit {
+export class Characterlist implements OnInit {
   characters = signal<Character[]>([]);
 
   constructor(private characterService: CharacterService) {}
