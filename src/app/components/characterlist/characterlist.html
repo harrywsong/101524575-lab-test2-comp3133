@@ -1,4 +1,4 @@
-<div *ngFor="let c of characters">
-  <img [src]="c.image" width="200">
+<div *ngFor="let c of characters; index as i">
+  <img [src]="c.image" width="120">
   <p (click)="goTo(c.id)">{{ c.name }} - {{ c.house }}</p>
 </div>
