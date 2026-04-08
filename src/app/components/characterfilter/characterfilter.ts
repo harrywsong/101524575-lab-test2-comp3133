@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Character } from '../../models/character';
@@ -7,7 +7,7 @@ import { HarryPotter } from '../../services/harry-potter';
 
 @Component({
   selector: 'app-characterfilter',
-  imports: [CommonModule, FormsModule],
+  imports: [FormsModule],
   templateUrl: './characterfilter.html',
   styleUrl: './characterfilter.css',
 })
@@ -16,7 +16,10 @@ export class Characterfilter {
   houses: string[] = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   selectedHouse: string = '';
 
-  constructor(private hpService: HarryPotter, private router: Router) {}
+  constructor(
+    private hpService: HarryPotter,
+    private router: Router,
+  ) {}
 
   onChange() {
     if (this.selectedHouse) {

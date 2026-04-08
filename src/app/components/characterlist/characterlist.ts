@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Character } from '../../models/character';
 import { HarryPotter } from '../../services/harry-potter';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-characterlist',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './characterlist.html',
   styleUrl: './characterlist.css',
 })
@@ -14,7 +14,10 @@ export class Characterlist {
   characters: Character[] = [];
 
   // fetch the characters from the service when the component is initialized
-  constructor(private hpService: HarryPotter, private router: Router) {
+  constructor(
+    private hpService: HarryPotter,
+    private router: Router,
+  ) {
     this.hpService.getCharacters().subscribe((data) => {
       this.characters = data;
     });
