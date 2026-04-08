@@ -1,1 +1,16 @@
-<p>characterdetails works!</p>
+@if (character()) {
+  <div class="details">
+    <img [src]="character()!.image" [alt]="character()!.name" />
+    <div class="info">
+      <h2>{{ character()!.name }}</h2>
+      <p>House: {{ character()!.house || 'Unknown' }}</p>
+      <p>Actor: {{ character()!.actor }}</p>
+      <p>Wizard: {{ character()!.wizard }}</p>
+      <p>Species: {{ character()!.species }}</p>
+      <p>Ancestry: {{ character()!.ancestry }}</p>
+      <p>Wand Wood: {{ character()!.wand.wood || 'Unknown' }}</p>
+      <p>Wand Core: {{ character()!.wand.core || 'Unknown' }}</p>
+      <p>Wand Length: {{ character()!.wand.length || 'Unknown' }}</p>
+    </div>
+  </div>
+}

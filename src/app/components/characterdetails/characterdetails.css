@@ -1,0 +1,13 @@
+.details {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+.details img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+}
+.info p {
+  margin: 6px 0;
+}

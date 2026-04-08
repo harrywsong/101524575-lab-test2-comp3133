@@ -16,6 +16,6 @@ export class CharacterService {
   }
 
   getCharacterById(id: string): Observable<Character[]> {
-    return this.http.get<Character[]>(`https://hp-api.onrender.com/api/characters/${id}`);
+    return this.http.get<Character[]>(`https://hp-api.onrender.com/api/character/${id}`);
   }
 }
