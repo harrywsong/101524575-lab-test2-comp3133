@@ -1,6 +1,23 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Character } from '../models/character';
 
 @Injectable({
   providedIn: 'root',
 })
-export class HarryPotter {}
+export class HarryPotter {
+  constructor(private http: HttpClient) {}
+
+  getCharacters(): Observable<Character[]> {
+    return this.http.get<Character[]>('https://hp-api.onrender.com/api/characters');
+  }
+
+  getCharacter(id: string): Observable<Character> {
+    return this.http.get<Character>(`https://hp-api.onrender.com/api/characters/${id}`);
+  }
+
+  getCharactersByHouse(house: string): Observable<Character[]> {
+    return this.http.get<Character[]>(`https://hp-api.onrender.com/api/characters/house/${house}`);
+  }
+}
