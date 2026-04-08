@@ -1,1 +1,4 @@
-<p>characterlist works!</p>
+<div *ngFor="let c of characters">
+  <img [src]="c.image" width="200">
+  <p (click)="goTo(c.id)">{{ c.name }} - {{ c.house }}</p>
+</div>
