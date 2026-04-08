@@ -1,1 +1,23 @@
-<p>characterfilter works!</p>
+<h1>Harry Potter Characters Filtered by House</h1>
+
+<select [value]="selectedHouse()" (change)="onHouseChange($any($event.target).value)">
+  @for (house of houses; track house) {
+    <option [value]="house">{{ house }}</option>
+  }
+</select>
+
+<div class="grid">
+  @for (character of characters(); track character.id) {
+    <div class="card">
+      @if (character.image) {
+        <img [src]="character.image" [alt]="character.name" />
+      } @else {
+        <div class="no-image">No Image Available</div>
+      }
+      <p><strong>{{ character.name }}</strong></p>
+      <p>Actor: {{ character.actor }}</p>
+      <p style="color: green;">{{ character.house }}</p>
+      <a [routerLink]="['/character', character.id]">View Details</a>
+    </div>
+  }
+</div>
