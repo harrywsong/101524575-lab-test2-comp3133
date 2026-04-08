@@ -1,1 +1,13 @@
-<p>characterfilter works!</p>
+<select [(ngModel)]="selectedHouse" (ngModelChange)="onChange()">
+  <option value="">Select House</option>
+  @for (h of houses; track h) {
+    <option [value]="h">{{ h }}</option>
+  }
+</select>
+
+<div>
+  @for (c of characters; track c.id) {
+    <img [src]="c.image" width="100">
+    <p (click)="goTo(c.id)">{{ c.name }} - {{ c.house }}</p>
+  }
+</div>
